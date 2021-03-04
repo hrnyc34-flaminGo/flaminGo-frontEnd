@@ -24,7 +24,7 @@ class CreateBookingForm extends React.Component {
       availableRooms: [],
       roomType: '',
       checkIn: '1970-01-01',
-      checkOut: '',
+      checkOut: '2021-01-01',
       guestList: [],
     };
 
@@ -33,6 +33,7 @@ class CreateBookingForm extends React.Component {
     this.selectRoom = this.selectRoom.bind(this);
     this.getGuestInfo = this.getGuestInfo.bind(this);
     this.submitBooking = this.submitBooking.bind(this);
+    this.getAvailableRooms = this.getAvailableRooms.bind(this);
   }
 
   getGuestInfo(e, form) {
@@ -72,7 +73,7 @@ class CreateBookingForm extends React.Component {
     //query for all available rooms within componentDidMount
     //component renders with '1970-10-10' as the default search date
     axios
-      .get(`${url}/reservations/availability/${this.state.checkIn}`)
+      .get(`${url}/reservations/availability/?checkIn=${this.state.checkIn}&checkOut=${this.state.checkOut}`)
       //this endpoint may be refactored later to take in 2 dates via query parameters
       //gets all available room types (not individual room)
       .then((reservations) => {
@@ -116,7 +117,10 @@ class CreateBookingForm extends React.Component {
     return (
       <HalfRoundDiv>
         {this.state.dateForm ? (
-          <SearchByDate inputDate={this.inputDate} goToNext={this.goToNext} />
+          <SearchByDate
+            inputDate={this.inputDate}
+            goToNext={this.goToNext}
+            getAvailableRooms={this.getAvailableRooms}/>
         ) : this.state.roomList ? (
           <AvailableRooms
             selectRoom={this.selectRoom}
