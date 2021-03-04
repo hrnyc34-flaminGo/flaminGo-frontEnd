@@ -7,13 +7,13 @@ import {
   titleTableTasks,
   titleTableEmployees,
   titleTableGuests,
-} from './listComponents/titleTables.jsx';
+} from './ListComponents/titleTables.jsx';
 import {
   entryTableRooms,
   entryTableTasks,
   entryTableEmployees,
   entryTableGuests,
-} from './listComponents/entryTables.jsx';
+} from './ListComponents/entryTables.jsx';
 import {
   roomsData,
   employeeData,
