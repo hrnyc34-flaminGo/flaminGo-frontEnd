@@ -3,10 +3,10 @@ import React, { useState, useContext } from 'react';
 import AddTaskForm from './AddTaskForm.jsx';
 import BackArrow from '../styledElements/BackArrow';
 import FlexCenterContainer from '../styledElements/FlexCenterContainer';
-import LandingButtons from '../globalComponents/landingPage/LandingButtons';
-import ListMaster from '../globalComponents/ListMaster';
-import { MainContext } from '../globalComponents/landingPage/MainContext.jsx';
-import useChoosePath from '../globalComponents/landingPage/useChoosePath';
+import LandingButtons from '../GlobalComponents/landingPage/LandingButtons';
+import ListMaster from '../GlobalComponents/ListMaster';
+import { MainContext } from '../GlobalComponents/landingPage/MainContext.jsx';
+import useChoosePath from '../GlobalComponents/landingPage/useChoosePath';
 import ViewAddEditRoom from '../management/ViewAddEditRoom.jsx';
 
 const HMLanding = ({ back }) => {
