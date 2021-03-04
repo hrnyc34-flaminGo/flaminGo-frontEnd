@@ -11,7 +11,10 @@ let SearchByDate = (props) => {
       <InputTypeText type='date' name={'checkIn'} onChange={props.inputDate} className="fromDateInput"/>
       <h2 className="to">To:</h2>
       <InputTypeText type='date' name={'checkOut'} onChange={props.inputDate} className="toDateInput"/>
-      <FormButton onClick={props.goToNext} id={'dateForm'} className="submit">
+      <FormButton onClick={(e) => {
+        props.goToNext(e);
+        props.getAvailableRooms();
+      }} id={'dateForm'} className="submit">
         Submit
       </FormButton>
     </HalfRoundDiv>
