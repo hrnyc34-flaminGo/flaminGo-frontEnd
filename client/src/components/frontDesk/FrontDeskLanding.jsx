@@ -4,9 +4,9 @@ import BackArrow from '../styledElements/BackArrow';
 import CheckoutLanding from './checkout/CheckoutLanding';
 import CreateBookingForm from './CreateBooking/CreateBookingForm.jsx';
 import FlexCenterContainer from '../styledElements/FlexCenterContainer';
-import LandingButtons from '../globalComponents/landingPage/LandingButtons';
+import LandingButtons from '../GlobalComponents/landingPage/LandingButtons';
 import SearchForReservations from './checkIn/01searchForReservations';
-import useChoosePath from '../globalComponents/landingPage/useChoosePath';
+import useChoosePath from '../GlobalComponents/landingPage/useChoosePath';
 import ViewAddEditRoom from '../management/ViewAddEditRoom.jsx';
 
 const FrontDeskLanding = ({ back }) => {
